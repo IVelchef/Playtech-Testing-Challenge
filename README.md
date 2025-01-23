@@ -24,12 +24,6 @@ This repository showcases a personal project focused on automating the core func
    - Simulates the Bingo game flow, including ticket purchase and number drawing.
    - Asserts that at least 20 numbers are marked correctly on the cards.
 
-## Documentation
-
-Each module in this repository is accompanied by clear, concise documentation that outlines:
-- The goals and objectives of the automation tasks.
-- The technical approach taken to implement the features.
-- Key challenges and how they were resolved.
 
 ## Highlights
 
