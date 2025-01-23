@@ -1,28 +1,64 @@
-### Project Description
-This project focuses on automated testing for the "Bingo" web application. It includes several Java classes that implement different functionalities, such as logging in, starting the game, and marking numbers. The tests are developed using **JUnit 5**, and interaction with the web pages is achieved through **Selenium WebDriver**.
+# Overview
 
-### Main Components
-1. **BingoHomePage**  
-   This is the base class for the Bingo pages. It defines the base URL of the application and serves as a foundation for other page classes.
+This repository showcases a personal project focused on automating the core functionalities of a Bingo web application. The project serves as a hands-on exercise in web UI automation using Selenium WebDriver and JUnit 5. The main goal is to practice creating end-to-end tests for user authentication, gameplay interactions, and result validation.
 
-2. **BingoPage**  
-   This class implements the core functionality of the game:
-   - Buying tickets.
-   - Monitoring the timer until the game starts.
-   - Marking numbers matching the drawn ones.
-   - Verifying the count of marked numbers.
+## Repository Structure
 
-3. **LoginPageBingo**  
-   This class handles user login by submitting a username and password and clicking the accept button for terms and conditions.
+1. **Login Automation**  
+   This module automates the login process for the Bingo application. Key functionalities include:
+   - Inputting user credentials.
+   - Handling the "Accept Terms and Conditions" step.
+   - Verifying a successful login before proceeding.
 
-4. **Test Class (testBingoNumberCheck)**  
-   The main idea of this test is to confirm that after the numbers are drawn, the test correctly searches for matches between the drawn numbers and those on the cards. It ensures that the matches are accurately marked on the cards. The test:
-   - Logs the user into the system.
-   - Starts the game.
-   - Verifies that at least 20 numbers were correctly marked.
+2. **Gameplay Automation**  
+   The gameplay module focuses on automating core Bingo features:
+   - Buying game tickets.
+   - Monitoring the countdown timer until the game starts.
+   - Matching drawn numbers with numbers on the game cards.
+   - Ensuring that the matching numbers are marked correctly on the cards.
+   - Completing the game after validating the results.
 
-### Key Highlights
-- **Use of WebDriverWait:** Ensures page elements are visible or ready for interaction before proceeding.
-- **Flexible Selectors:** XPath and CSS selectors are used for precise element targeting.
-- **Dynamic Waiting:** Handles time intervals between the drawing of numbers.
-- **JUnit Assertions:** Verify the correctness of marked numbers.
+3. **JUnit Test: Bingo Number Matching Validation**  
+   This test verifies the proper functionality of the automated gameplay:
+   - Logs in with test credentials.
+   - Simulates the Bingo game flow, including ticket purchase and number drawing.
+   - Asserts that at least 20 numbers are marked correctly on the cards.
+
+## Documentation
+
+Each module in this repository is accompanied by clear, concise documentation that outlines:
+- The goals and objectives of the automation tasks.
+- The technical approach taken to implement the features.
+- Key challenges and how they were resolved.
+
+## Highlights
+
+### Learning Objectives
+- **Web UI Automation:** Practice using Selenium WebDriver to interact with dynamic elements.
+- **Test Design:** Develop robust and reusable test structures with JUnit 5.
+- **Dynamic Waiting Strategies:** Handle asynchronous elements using WebDriverWait.
+- **Assertions and Validations:** Confirm the correctness of automated actions with meaningful assertions.
+
+### Technical Notes
+- Flexible selectors (XPath and CSS) are used for targeting web elements.
+- Dynamic waiting ensures stable test execution, even for time-sensitive scenarios like countdowns.
+- The project demonstrates effective logging and error handling.
+
+## Requirements
+
+This project is purely exploratory and does not follow specific business requirements. The following tasks were designed based on common gameplay flows in Bingo applications:
+
+### Scenario 1: Bingo Gameplay
+- Log in with test user credentials.
+- Select a game and purchase tickets.
+- Wait for the countdown timer to reach zero and start the game.
+- Monitor the numbers drawn and match them with the cards.
+- Ensure that at least 20 numbers are correctly marked.
+
+### Scenario 2: Timer Validation and Logging
+- Validate the proper functionality of the timer before game start.
+- Log all drawn numbers for traceability.
+
+## Conclusion
+
+This repository represents a learning project aimed at practicing automation testing techniques in a web application context. While the Bingo application used here is fictional, the approaches and methods can be applied to real-world testing scenarios. The clear structure and documentation make it a valuable resource for understanding web automation practices.
